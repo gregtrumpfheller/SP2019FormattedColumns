@@ -1,0 +1,191 @@
+{
+"$schema": "https://developer.microsoft.com/json-schemas/sp/column-formatting.schema.json",
+"elmType": "div",
+	  "attributes": {
+	    "class": {
+	      "operator": "+",
+	      "operands": [
+	        {
+	          "operator": "?",
+	          "operands": [
+	            {
+	              "operator": "==",
+	              "operands": [
+	                "@currentField",
+	                    "Received, Mounted, Good"
+	              ]
+	            },
+	            "sp-field-severity--good",
+				
+			{
+	           "operator": "?",
+	              "operands": [
+	                {
+	                  "operator": "==",
+	                  "operands": [
+	                    "@currentField",
+	                    "Received, Not Mounted, Good"
+	                  ]
+	                },
+	                "sp-field-severity--good",
+	        {
+	           "operator": "?",
+	              "operands": [
+	                {
+	                  "operator": "==",
+	                  "operands": [
+	                    "@currentField",
+	                    "Received, Mounted, Damaged"
+	                  ]
+	                },
+	                "sp-field-severity--warning",
+			{
+	           "operator": "?",
+	              "operands": [
+	                {
+	                  "operator": "==",
+	                  "operands": [
+	                    "@currentField",
+	                    "Received, Not Mounted, Damaged"
+	                  ]
+	                },
+	                "sp-field-severity--warning",
+	        {
+	                  "operator": "?",
+	                  "operands": [
+	                    {
+	                      "operator": "==",
+	                      "operands": [
+	                        "@currentField",
+	                        "Received, Returned, Damaged"
+	                      ]
+	                    },
+	                    "sp-field-severity--severeWarning",
+	                    {
+	                      "operator": "?",
+	                      "operands": [
+	                        {
+	                          "operator": "==",
+	                          "operands": [
+	                            "@currentField",
+	                            "Not Received"
+	                          ]
+	                        },
+	                        "sp-field-severity--blocked",
+	                        "sp-field-severity--low"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            }
+	          ]
+	        }
+			]
+			}
+			]
+			},
+	        " ms-fontColor-neutralSecondary"
+	      ]
+	    }
+	  },
+	  "children": [
+	    {
+	      "elmType": "span",
+	      "style": {
+	        "display": "inline-block",
+	        "padding": "0 4px"
+	      },
+	      "attributes": {
+	        "iconName": {
+	          "operator": "?",
+	          "operands": [
+	            {
+	              "operator": "==",
+	              "operands": [
+	                "@currentField",
+	                "Received, Mounted, Good"
+	              ]
+	            },
+	            "CheckMark",
+	            {
+	              "operator": "?",
+	              "operands": [
+	                {
+	                  "operator": "==",
+	                  "operands": [
+	                    "@currentField",
+	                    "Received, Mounted, Damaged"
+	                  ]
+	                },
+	                "Forward",
+					
+				{
+	              "operator": "?",
+	              "operands": [
+	                {
+	                  "operator": "==",
+	                  "operands": [
+	                    "@currentField",
+	                    "Received, Not Mounted, Damaged"
+	                  ]
+	                },
+	                "Forward",	
+					
+	                {
+	                  "operator": "?",
+	                  "operands": [
+	                    {
+	                      "operator": "==",
+	                      "operands": [
+	                        "@currentField",
+	                        "Received, Returned"
+	                      ]
+	                    },
+	                    "Error",
+						
+				   {
+	                  "operator": "?",
+	                  "operands": [
+	                    {
+	                      "operator": "==",
+	                      "operands": [
+	                        "@currentField",
+	                        "Received, Not Mounted, Good"
+	                      ]
+	                    },
+	                    "CheckMark",
+						
+						
+	                    {
+	                      "operator": "?",
+	                      "operands": [
+	                        {
+	                          "operator": "==",
+	                          "operands": [
+	                            "@currentField",
+	                            "Not Received"
+	                          ]
+	                        },
+	                        "Warning",
+	                        "ErrorBadge"
+	                      ]
+	                    }
+	                  ]
+	                }
+	              ]
+	            }
+				]
+				}
+				]
+				}
+	          ]
+	        }
+	      }
+	    },
+	    {
+	      "elmType": "span",
+	      "txtContent": "@currentField"
+	    }
+	  ]
+}
